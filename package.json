@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "run-p type-check \"build-only {@}\" --",
     "preview": "vite preview",
-    "test:unit": "vitest",
+    "test": "vitest",
     "build-only": "vite build",
     "type-check": "vue-tsc --build",
     "format": "prettier --write --experimental-cli src/"
@@ -18,12 +18,14 @@
     "vue-router": "^5.2.0"
   },
   "devDependencies": {
+    "@testing-library/vue": "^8.1.0",
     "@tsconfig/node24": "^24.0.4",
     "@types/jsdom": "^28.0.3",
     "@types/node": "^24.13.3",
     "@vitejs/plugin-vue": "^6.0.8",
     "@vue/test-utils": "^2.4.11",
     "@vue/tsconfig": "^0.9.1",
+    "happy-dom": "^20.11.0",
     "jsdom": "^29.1.1",
     "npm-run-all2": "^9.0.2",
     "prettier": "3.9.5",

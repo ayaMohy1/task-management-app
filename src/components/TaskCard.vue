@@ -3,7 +3,7 @@
     <!-- Top Row: Title & Priority Pill -->
     <div class="card-header">
       <div class="card-header-title-section">
-        <img src="/planning.png" class="card-header-image" alt="task" />
+        <img src="../assets/planning.png" class="card-header-image" alt="task" />
         <div>
           <h3 class="task-title">{{ task?.title }}</h3>
 

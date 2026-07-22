@@ -4,6 +4,7 @@
   "src/**/*.tsx",],
   "exclude": ["src/**/__tests__/*"],
   "compilerOptions": {
+    "types": ["vitest/globals"],
     // Extra safety for array and object lookups, but may have false positives.
     "noUncheckedIndexedAccess": true,
     "ignoreDeprecations": "6.0",
