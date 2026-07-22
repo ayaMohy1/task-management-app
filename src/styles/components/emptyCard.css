@@ -1,0 +1,10 @@
+.empty-state {
+  text-align: center;
+  padding: 2.5rem;
+  color: var(--color-text-faint);
+}
+
+.empty-img {
+  width: 200px;
+  margin: auto;
+}

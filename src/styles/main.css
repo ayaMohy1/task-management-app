@@ -1,0 +1,9 @@
+@import './base.css';
+@import './variables.css';
+@import './global.css';
+@import './pages/homePage.css';
+@import './pages/taskDetailPage.css';
+@import './components/loadingState.css';
+@import './components/modal.css';
+@import './components/emptyCard.css';
+@import './pages/NotFoundPage.css';
