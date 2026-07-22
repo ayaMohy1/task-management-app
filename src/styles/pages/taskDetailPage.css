@@ -367,13 +367,6 @@
   gap: var(--space-2);
 }
 
-.detail-section h2 {
-  margin: 0 0 var(--space-3);
-  font-size: var(--font-size-base);
-  font-weight: var(--font-weight-semibold);
-  color: var(--color-text);
-}
-
 .detail-description {
   margin: 0;
   border-radius: 0.5rem;
@@ -381,7 +374,7 @@
   border: 1px solid rgba(255, 255, 255, 0.9);
   font-size: var(--font-size-sm);
   line-height: var(--line-height-normal);
-  color: var(--color-text-muted);
+  color: var(--color-text);
   white-space: pre-wrap;
 }
 

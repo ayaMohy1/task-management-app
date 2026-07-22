@@ -261,13 +261,13 @@ onMounted(() => {
               <line x1="8" y1="2" x2="8" y2="6" />
               <line x1="3" y1="10" x2="21" y2="10" />
             </svg>
-            {{ task?.dueDate }}
+            {{ task?.dueDate ? new Date(task.dueDate).toLocaleString() : 'No due date' }}
           </span>
         </div>
       </div>
 
       <section class="detail-section">
-        <h2>Description</h2>
+        <span class="meta-label">Description</span>
         <p class="detail-description">
           {{ task?.description || 'No description provided for this task.' }}
         </p>

@@ -9,7 +9,9 @@
 
           <div class="card-footer">
             <span>Due Date: {{ ' ' }} </span>
-            <span class="time-text"> {{ task?.dueDate }}</span>
+            <span class="time-text">
+              {{ task?.dueDate ? new Date(task.dueDate).toLocaleString() : 'No due date' }}</span
+            >
           </div>
         </div>
       </div>

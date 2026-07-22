@@ -5,7 +5,6 @@ import { useTaskStore } from '../stores/task'
 import type { Task, TaskStatus } from '../types/task'
 import { priorityOptions, statusOptions } from '../utils/utils'
 
-
 const props = defineProps<{
   task?: Task
 }>()
@@ -35,7 +34,6 @@ const resetForm = () => {
   selectedDate.value = null
   selectedTime.value = ''
 }
-
 
 const tryParseLegacyDate = (value: string): Date | null => {
   if (!value || value === 'No due date') return null
@@ -169,9 +167,15 @@ const formattedTime = computed(() => {
 // Final string handed to the store, keeping the existing Task.dueDate shape
 const dueDateOutput = computed(() => {
   if (!selectedDate.value) return 'No due date'
-  return formattedTime.value
-    ? `${formattedDate.value} · ${formattedTime.value}`
-    : formattedDate.value
+
+  const date = new Date(selectedDate.value)
+
+  if (selectedTime.value) {
+    const [hour, minute] = selectedTime.value.split(':').map(Number)
+    date.setHours(hour ?? 0, minute ?? 0, 0, 0)
+  }
+
+  return date.toISOString()
 })
 
 const statusOpen = ref(false)
